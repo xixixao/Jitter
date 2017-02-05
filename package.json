@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "jitter",
+        "scope": null,
+        "escapedName": "jitter",
+        "name": "jitter",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/srb/Work/Web/Shem"
+    ]
+  ],
+  "_from": "jitter@latest",
+  "_id": "jitter@1.3.0",
+  "_inCache": true,
+  "_location": "/jitter",
+  "_npmUser": {
+    "name": "trevorburnham",
+    "email": "trevorburnham@gmail.com"
+  },
+  "_npmVersion": "1.3.24",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "jitter",
+    "scope": null,
+    "escapedName": "jitter",
+    "name": "jitter",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/jitter/-/jitter-1.3.0.tgz",
+  "_shasum": "15d9ae4407f3e6327d6ad336faf0ebc5be0d25f0",
+  "_shrinkwrap": null,
+  "_spec": "jitter",
+  "_where": "/Users/srb/Work/Web/Shem",
+  "author": {
+    "name": "Trevor Burnham"
+  },
+  "bin": {
+    "jitter": "./bin/jitter"
+  },
+  "dependencies": {
+    "coffee-script": ">= 1.1.0",
+    "sink": "0.1.1 - 0.2.99"
+  },
+  "description": "Simple continuous compilation for CoffeeScript",
+  "devDependencies": {},
+  "directories": {
+    "lib": "./lib"
+  },
+  "dist": {
+    "shasum": "15d9ae4407f3e6327d6ad336faf0ebc5be0d25f0",
+    "tarball": "https://registry.npmjs.org/jitter/-/jitter-1.3.0.tgz"
+  },
+  "engines": {
+    "coffee-script": ">=1.1.0",
+    "node": ">=0.4.0"
+  },
+  "keywords": [
+    "coffeescript",
+    "compiler"
+  ],
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "main": "./lib/jitter",
+  "maintainers": [
+    {
+      "name": "TrevorBurnham",
+      "email": "trevorburnham@gmail.com"
+    },
+    {
+      "name": "trevorburnham",
+      "email": "trevorburnham@gmail.com"
+    }
+  ],
+  "name": "jitter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.3.0"
+}
