@@ -188,13 +188,13 @@ compileScript = (source, target, options) ->
 
             numOfParentDirs = slashedTargetPath.split('/').length - 1
 
-            mapFilename = slashedTargetPath.replace '.js', '.map'
+            mapFilename = slashedTargetPath.replace '.js', '.js.map'
 
             if mapFilename.lastIndexOf('/') isnt -1
 
                 mapFilename = mapFilename.substr(mapFilename.lastIndexOf('/') + 1)
 
-            jsFilename = mapFilename.replace '.map', '.js'
+            jsFilename = mapFilename.replace '.map', ''
 
             pathToRoot = do ->
 
@@ -204,7 +204,7 @@ compileScript = (source, target, options) ->
 
                 _path.join '\\'
 
-            mapPath = slashedTargetPath.substr(0, slashedTargetPath.length - 2) + 'map'
+            mapPath = slashedTargetPath.substr(0, slashedTargetPath.length - 2) + 'js.map'
 
             coffeePath = source.split('\\').join('/').split('/').join('\\')
 
@@ -320,7 +320,9 @@ notify = (source, errMessage) ->
 
 runTests = ->
 
-    exec postScript, ->
+    exec postScript, (error, _, stderr) ->
+        if error
+            console.log stderr
         withTime color 'green', postScriptMessage
 
 parseOptions = ->
@@ -333,7 +335,7 @@ parseOptions = ->
 
     options =    optionParser.parse process.argv
 
-    [baseSource, baseTarget, postScriptMessage, postScript] = (options.arguments[arg] or '' for arg in [2..4])
+    [baseSource, baseTarget, postScriptMessage, postScript] = (options.arguments[arg] or '' for arg in [2..5])
 
     if /\/$/.test baseSource then baseSource = baseSource.substr 0, baseSource.length-1
 
